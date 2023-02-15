@@ -21,7 +21,8 @@ public class PostService {
 	}
 	
 	public List<Post> findByTitle(String text) {
-		return repo.findByTitleContainingIgnoreCase(text);
+		return repo.findByTitle(text); // Metodo alternativo utilizando a anotation @Query
+		//return repo.findByTitleContainingIgnoreCase(text); // Metodo utilizando metodo padrão do framework spring
 		
 	}
 }
